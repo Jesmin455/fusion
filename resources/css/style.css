@@ -1,0 +1,534 @@
+/*
+Template Name: Fusion
+Template URI: 
+Author: Jasmin
+Author URI: 
+Version: 1.0
+Description: A simple Travel Website.
+*/
+
+/*
+
+CSS INDEX
+---------
+1. GLOBAL CSS
+2. REUSABLE COMPONENETS
+3. HEADER SECTION 
+4. HOME
+5. SERVICE
+6. ABOUT
+7. BLOG
+8. CLIENT
+9. DISCOUNT
+10. CONTACT
+
+*/
+
+/* GLOBAL CSS */
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.3;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    margin: 0;
+    color: #000;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+ }
+
+ ul > li {
+    list-style-type: none;
+ }
+
+ .clearfix::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+hr {
+    border: 0;
+    border-bottom: .1rem solid ;
+}
+
+h1 {
+    text-align: center;
+    font-size: 9rem;
+    color: #fff;
+}
+
+h2 {
+    color: #333;
+    font-size: 5.5rem;
+    text-align: center;
+    line-height: 10rem;
+}
+
+h3 {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+p {
+    text-transform: capitalize;
+    text-align: center;
+    color: #fff;
+}
+
+span {
+    color: #fbad27;
+    border-top: .2rem solid #fbad27;
+    border-bottom: .2rem solid #fbad27;
+}
+
+.box-shadow {
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+}
+
+
+/*  REUSABLE COMPONENTS */
+
+.container{
+    max-width: 118rem;
+    margin: auto;
+}
+
+section{
+    padding: 6rem 0;
+}
+
+ion-icon {
+    color: #fbad27;
+    font-size: 4.5rem;
+}
+
+input {
+    display: block;
+    margin: auto;
+}
+
+
+.title {
+    padding: 0 10%;
+}
+
+
+.title h2{
+    color: #333;
+    text-align: center;
+    text-transform: capitalize;
+ }
+
+
+ .btn{
+    transition: all .3s ease-out;
+    border-radius: 50rem;
+    font-weight: bold;
+    width: 20rem;
+    background-color: #fbad27;
+    color: #fff;
+    text-align: center;
+    text-transform: capitalize;
+    padding: 1.3rem 0;
+    cursor: pointer;
+    border: .2rem solid #fbad27;
+    display: block;
+    margin: auto;
+}
+
+.btn:hover {
+    text-decoration: none;
+    background: transparent;
+    color: #fbad27;
+}
+
+ .p3 {
+    text-align: left;
+    padding: 0 2rem;
+}
+
+
+/* HEADER SECTION */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 20px 0 0 0;
+    transition:  all 0.3s ease-in-out;
+    overflow: hidden;
+    z-index: 9999;
+}
+
+
+header.sticky {
+    padding: 20px 0;
+}
+
+.h-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-bar>nav>ul {
+    display: flex;
+    gap: 25px;
+    font-size: 18px;
+}
+
+.nav-bar>nav>ul>li>a {
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+    text-transform: capitalize;
+}
+
+.nav-bar>nav>ul>li>a:hover,
+.nav-bar>nav>ul>li>a.active {
+   color: #fbad27;
+   text-decoration: none;
+}
+
+.nav-btn {
+    display: none;
+}
+
+hr:nth-child(1) {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: none;
+}
+
+/* HOME SECTION*/
+
+#home {
+    min-height: 100vh;
+    background: rgba(0, 0, 0, 0.795) url(./img/home.jpg) no-repeat center top / cover;
+    background-blend-mode: overlay;
+}
+.home-content-box {
+    margin: 20rem 0 0 0;
+}
+
+.home-content-box{
+    line-height: 3rem;
+}
+
+.home-content-box p {
+    color: #fff;
+    font-size: 1.8rem;
+}
+
+/* SERVICE SECTION */
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 0 12rem;
+    margin-top: 5rem
+}
+.service-grid-item {
+    padding: 2rem 5rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+ .service-grid-item p {
+    text-align: start;
+    color:#333;
+ }
+
+hr:nth-child(3) {
+    margin-top: 5rem;
+}
+
+ /* ABOUT SECTION */
+
+ .about-title h2,p {
+    text-align: center;
+    color: #333;
+ }
+ 
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 5rem 10% 0;
+}
+
+.about-grid-item {
+    background-color: #fff;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+ 
+}
+
+.grid-content{
+    background: #fff;
+    padding: 30px;
+    opacity: 0.6;
+    margin-top: 66%;
+}
+
+.grid-content h4 {
+    text-transform: capitalize;
+    font-size: 3rem;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: #000;
+}
+
+.img1 {
+    background: url(img/thailand-min.jpg) no-repeat center / cover;
+    height: 30rem;
+    overflow: hidden;
+}
+
+.img2 {
+    background: url(img/australia-min.jpg) no-repeat center / cover;
+    height: 30rem;
+    overflow: hidden;
+}
+
+.img3 {
+    background: url(img/indonesia-min.jpg) no-repeat center / cover;
+    height: 30rem;
+    overflow: hidden;
+}
+
+.img4 {
+    background: url(img/france-min.jpg) no-repeat center / cover;
+    height: 30rem;
+    overflow: hidden;
+}
+
+.img5 {
+    background: url(img/malaysia-min.jpg) no-repeat center / cover;
+    height: 30rem;
+    overflow: hidden;
+}
+
+.img6 {
+    background: url(img/usa-min.jpg) no-repeat center / cover;
+    height: 30rem;
+    overflow: hidden;
+}
+
+/* BLOG SECTION */
+
+
+.blog-grid {
+    display: grid;
+    grid-gap: 3rem;
+    grid-template-columns: 50% 25% 25%;  
+    height: 50rem;
+    padding: 5rem 5% 22rem 0;
+}
+
+.text h4 {
+    font-size: 2rem;
+    text-align: left;
+    padding: 1rem 2rem;
+}
+
+
+.img img {
+    box-shadow: rgba(0, 0, 0, 0.15) 0px -15px 55px, rgba(0, 0, 0, 0.05) 5px 15px 10px;
+    height: 100%;
+    width: 100%;
+}
+
+.blog-grid-item1 {
+    display: grid;
+    grid-template-rows: 70% 30%;
+    grid-gap: 3rem;
+}
+.blog-grid-item2 {
+     display: grid;
+    grid-template-columns: 1fr 1fr;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+}
+
+.blog-grid-item3 {
+    display: grid;
+    grid-template-rows: 70% 30%;
+    grid-gap: 3rem;
+   
+}
+
+.blog-grid-item4 {
+    display: grid;
+    grid-template-rows: 50% 50%;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+}
+.blog-grid-item5 {
+    display: grid;
+    grid-template-rows: 30% 70%;
+    grid-gap: 3rem;
+ 
+}
+.blog-grid-item6 {
+    display: grid;
+    grid-template-rows: 50% 50%;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+}
+
+
+/* CLIENT SECTION */
+
+
+.client-content-grid {
+    display: grid;
+    grid-template-columns: 25% 75%;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+    padding: 5rem 8rem;
+    margin: 5rem 8rem;
+    gap: 5rem;
+}
+
+.client-content-grid:nth-child(2),
+.client-content-grid:nth-child(3) {
+    display: none;
+}
+
+
+.client-content-grid-item img {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 22rem;
+    width: 98%;
+    border-radius: 10%;
+}
+
+.client-content-grid-item p {
+   text-align: left;
+}
+
+.client-content-grid-item span {
+    border: none;
+    margin-top: 7rem;
+    display: block;
+    line-height: 3.5rem;
+}
+
+.ss-content {
+    text-align: center;
+}
+.ss {
+    height: .7rem;
+    width: .7rem;
+    background: #ccc;
+    border-radius: 50%;
+    display: inline-block;
+    outline: .1rem solid #ccc;
+    outline-offset: .2rem;
+    margin: 0 1rem;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.ss-active {
+    background: #fbad27;
+    outline: .1rem solid #fbad27;
+    outline-offset: .3rem;
+    height: .9rem;
+    width: .9rem;
+}
+
+.ss:hover {
+    background: #fbad27;
+    outline: .1rem solid #fbad27;
+    outline-offset: .3rem;
+    height: .9rem;
+    width: .9rem;
+}
+
+
+/* DISCOUNT SECTION */
+
+#discount {
+    background: #fbad27;
+}
+
+.p1 {
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+    float: left;
+    margin-top: -2rem;
+}
+
+.discount-content {
+    padding: 3rem 3rem;
+}
+
+.btn1 {
+    background: transparent;
+    font-weight: bold;
+    padding: 1.1rem 0;
+    width: 20rem;
+    cursor: pointer;
+    color: #fff;
+    float: right;
+    border-radius: 50rem;
+    border: .2rem solid #fff;
+    transition: all .3s ease-out;
+    text-transform: capitalize;
+    margin-top: -2rem;
+}
+
+.btn1:hover {
+    background-color: #fff;
+    color: #fbad27;
+}
+
+
+/* CONTACT SECTION */
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16rem;
+}
+
+.icon {
+    font-size: 2.5rem;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+.p2 {
+    font-size: 1.5rem;
+    font-family: 'Roboto', sans-serif;
+    text-align: start;
+}
